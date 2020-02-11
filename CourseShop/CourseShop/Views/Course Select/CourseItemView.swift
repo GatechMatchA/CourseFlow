@@ -37,6 +37,6 @@ struct CourseItemView: View {
 
 struct CourseItemView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseItemView(course: Course(courseNum: "CS 1331", courseName: "Introduction to Object Oriented Programming", numCredits: 3), selected: false)
+        CourseItemView(course: Constants.sampleCourse, selected: false)
     }
 }

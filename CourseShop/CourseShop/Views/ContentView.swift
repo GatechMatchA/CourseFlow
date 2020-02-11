@@ -12,7 +12,9 @@ struct ContentView: View {
     @State var searchStr = ""
     @EnvironmentObject var dataModel: DataModel
     var body: some View {
-        CourseSelectView()
+        NavigationView {
+            CourseSelectView()
+        }
     }
 }
 

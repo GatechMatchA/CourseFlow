@@ -12,7 +12,7 @@ struct CourseSelectView: View {
     @EnvironmentObject var viewModel: ViewModel
     var body: some View {
         VStack {
-            SearchBar(searchText: $viewModel.searchStr)
+            SearchBar(searchText: $viewModel.searchStr).padding(.top)
             Group {
                 if viewModel.displayedCourses.count > 0 {
                     ScrollView {
@@ -36,9 +36,7 @@ struct CourseSelectView: View {
                 }
             }
             Spacer()
-            Button(action: {
-                print("Selected courses: \(self.viewModel.selectedCourses)")
-            }) {
+            NavigationLink(destination: CourseCompareView()) {
                 Text("Compare (\(self.viewModel.selectedCourses.count))")
                 .foregroundColor(Color("secondary_text_color"))
             }
@@ -46,6 +44,7 @@ struct CourseSelectView: View {
             .background(Color("theme_color"))
             .cornerRadius(25)
         }
+        .navigationBarTitle("Course Select", displayMode: .inline)
     }
 }
 

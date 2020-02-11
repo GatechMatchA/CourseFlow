@@ -12,4 +12,14 @@ struct Course: Hashable {
     var courseNum: String
     var courseName: String
     var numCredits: Int
+    var selectedSection: Section?
+    
+    static func == (lhs: Course, rhs: Course) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(courseNum)
+        hasher.combine(courseName)
+        hasher.combine(numCredits)
+    }
 }
