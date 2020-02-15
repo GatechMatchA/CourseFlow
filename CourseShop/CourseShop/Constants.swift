@@ -18,9 +18,9 @@ struct Constants {
     
     static var testProfessors = [
         Professor(name: "Christopher Simpkins", sections: [Constants.testSectionA, Constants.testSectionB], avgGPA: 3.02, easiness: 4.5, quality: 4.9),
-        Professor(name: "Monica Sweat", sections: [Constants.testSectionC, Constants.testSectionD], avgGPA: 2.73, easiness: 4.5, quality: 4.9),
-        Professor(name: "Susan Watson-Phillips", sections: [Constants.testSectionC], avgGPA: 2.91, easiness: 4.5, quality: 4.9),
-        Professor(name: "John Stasko", sections: [Constants.testSectionD], avgGPA: 2.66, easiness: 4.5, quality: 4.9)
+        Professor(name: "Monica Sweat", sections: [Constants.testSectionC, Constants.testSectionD], avgGPA: 2.73, easiness: 4.1, quality: 3.2),
+        Professor(name: "Susan Watson-Phillips", sections: [Constants.testSectionC], avgGPA: 2.91, easiness: 3.2, quality: 2.0),
+        Professor(name: "John Stasko", sections: [Constants.testSectionD], avgGPA: 2.66, easiness: 2.1, quality: 4.6)
     ]
     
     static var testSectionA = Section(letter: "A", days: "MWF", time: "10:30 - 11:20")

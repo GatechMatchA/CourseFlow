@@ -12,7 +12,7 @@ class CourseDetailViewModel: ObservableObject {
     @Published var courseDetails: CourseDetails = Constants.placeholderCourseDetails
     
     func loadCourseDetails(for course: Course, onComplete: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.courseDetails = Constants.sampleCourseDetails
             onComplete()
         }
