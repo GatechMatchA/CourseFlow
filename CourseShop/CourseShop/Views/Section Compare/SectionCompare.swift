@@ -16,7 +16,7 @@ struct SectionCompare: View {
     var body: some View {
         LoadingView(isShowing: $isLoading) {
             VStack {
-                FilterBar(sort: self.professorSelectViewModel.sort(by:))
+                SortBar(sort: self.professorSelectViewModel.sort(by:))
                 ScrollView {
                     ForEach(self.professorSelectViewModel.professors, id: \.self) { professor in
                         ZStack {

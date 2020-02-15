@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A01044623F7A6AB002BA509 /* SortBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01044523F7A6AB002BA509 /* SortBar.swift */; };
 		5A869A4A23F2573A0026B555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A869A4923F2573A0026B555 /* AppDelegate.swift */; };
 		5A869A4C23F2573A0026B555 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A869A4B23F2573A0026B555 /* SceneDelegate.swift */; };
 		5A869A4E23F2573A0026B555 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A869A4D23F2573A0026B555 /* ContentView.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A01044523F7A6AB002BA509 /* SortBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortBar.swift; sourceTree = "<group>"; };
 		5A869A4623F2573A0026B555 /* CourseShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A869A4923F2573A0026B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A869A4B23F2573A0026B555 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A01044723F7A701002BA509 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				5A01044523F7A6AB002BA509 /* SortBar.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 		5A869A3D23F2573A0026B555 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 			children = (
 				5A869A5D23F25EE30026B555 /* SearchBar.swift */,
 				5A869A4D23F2573A0026B555 /* ContentView.swift */,
+				5A01044723F7A701002BA509 /* ReusableViews */,
 				5A9A976023F74E340083434F /* Section Compare */,
 				5A869A7C23F285590026B555 /* Course Select */,
 				5A869A7B23F285490026B555 /* Course Compare */,
@@ -275,6 +286,7 @@
 				5A869A4C23F2573A0026B555 /* SceneDelegate.swift in Sources */,
 				5A9A976623F776120083434F /* LoadingView.swift in Sources */,
 				5A9A976223F775100083434F /* CourseDetails.swift in Sources */,
+				5A01044623F7A6AB002BA509 /* SortBar.swift in Sources */,
 				5A869A7E23F287090026B555 /* SectionView.swift in Sources */,
 				5A869A8023F2925D0026B555 /* SectionCompare.swift in Sources */,
 				5A869A7823F284DD0026B555 /* CourseCompareView.swift in Sources */,
