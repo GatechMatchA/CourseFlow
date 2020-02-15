@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5A01044623F7A6AB002BA509 /* SortBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01044523F7A6AB002BA509 /* SortBar.swift */; };
+		5A01044923F7A897002BA509 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01044823F7A897002BA509 /* Review.swift */; };
+		5A01044B23F7A98E002BA509 /* Professor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01044A23F7A98E002BA509 /* Professor.swift */; };
 		5A869A4A23F2573A0026B555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A869A4923F2573A0026B555 /* AppDelegate.swift */; };
 		5A869A4C23F2573A0026B555 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A869A4B23F2573A0026B555 /* SceneDelegate.swift */; };
 		5A869A4E23F2573A0026B555 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A869A4D23F2573A0026B555 /* ContentView.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		5A01044523F7A6AB002BA509 /* SortBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortBar.swift; sourceTree = "<group>"; };
+		5A01044823F7A897002BA509 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		5A01044A23F7A98E002BA509 /* Professor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Professor.swift; sourceTree = "<group>"; };
 		5A869A4623F2573A0026B555 /* CourseShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A869A4923F2573A0026B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A869A4B23F2573A0026B555 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,7 +198,9 @@
 				5A869A6B23F272F50026B555 /* Course.swift */,
 				5A9A976123F775100083434F /* CourseDetails.swift */,
 				5A869A7323F280400026B555 /* Section.swift */,
+				5A01044A23F7A98E002BA509 /* Professor.swift */,
 				5A869A6D23F275A90026B555 /* DataModel.swift */,
+				5A01044823F7A897002BA509 /* Review.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,11 +288,13 @@
 				5A869A6E23F275A90026B555 /* DataModel.swift in Sources */,
 				5A869A7423F280400026B555 /* Section.swift in Sources */,
 				5A869A5E23F25EE30026B555 /* SearchBar.swift in Sources */,
+				5A01044B23F7A98E002BA509 /* Professor.swift in Sources */,
 				5A869A6223F25F7B0026B555 /* ViewModifiers.swift in Sources */,
 				5A869A4C23F2573A0026B555 /* SceneDelegate.swift in Sources */,
 				5A9A976623F776120083434F /* LoadingView.swift in Sources */,
 				5A9A976223F775100083434F /* CourseDetails.swift in Sources */,
 				5A01044623F7A6AB002BA509 /* SortBar.swift in Sources */,
+				5A01044923F7A897002BA509 /* Review.swift in Sources */,
 				5A869A7E23F287090026B555 /* SectionView.swift in Sources */,
 				5A869A8023F2925D0026B555 /* SectionCompare.swift in Sources */,
 				5A869A7823F284DD0026B555 /* CourseCompareView.swift in Sources */,
