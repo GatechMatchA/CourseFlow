@@ -29,13 +29,14 @@ struct CourseSelectView: View {
                             .shadow(radius: 5)
                             .padding()
                         }
-                    }
+                    }.padding(.bottom, -8)
                 } else {
                     Text("No courses match your search.")
                     .foregroundColor(Color("primary_text_color"))
                 }
             }
             Spacer()
+            Divider()
             NavigationLink(destination: CourseCompareView()) {
                 Text("Compare (\(self.viewModel.selectedCourses.count))")
                 .foregroundColor(Color("secondary_text_color"))
@@ -43,6 +44,8 @@ struct CourseSelectView: View {
             .frame(width: 300, height: 50)
             .background(Color("theme_color"))
             .cornerRadius(25)
+            .padding(.bottom, 10)
+            .padding(.top, 2)
         }
         .navigationBarTitle("Course Select", displayMode: .inline)
     }

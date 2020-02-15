@@ -19,17 +19,25 @@ struct CourseCompareView: View {
                         .padding()
                         .shadow(radius: 2)
 
-                    NavigationLink(destination: SectionCompare(course: course)) {
+                    NavigationLink(destination: SectionCompare(course: Binding(get: {
+                        course
+                    }, set: { (newCourse) in
+                        for (i, c) in self.viewModel.selectedCourses.enumerated() {
+                            if c == newCourse {
+                                self.viewModel.selectedCourses[i] = newCourse
+                            }
+                        }
+                    }))) {
                         VStack {
                             CourseHeaderView(course: course)
-                            SectionView(section: course.selectedSection)
+                            SectionView(professor: course.selectedProfessor, reviewsViewable: false)
                                 .frame(height: 120)
-                                .padding(.top, 10)
                         }
                         .padding()
                     }
                 }
             }
+            .navigationBarTitle(Text("Compare"))
         }
     }
 }

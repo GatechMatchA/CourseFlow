@@ -9,23 +9,44 @@
 import SwiftUI
 
 struct SectionView: View {
-    var section: Section?
+    var professor: Professor?
+    var reviewsViewable: Bool
+    @State var reviewsPresented: Bool = false
     var body: some View {
         Group {
-            if section != nil {
+            if professor != nil {
                 VStack {
                     HStack {
-                        Text("Section \(section!.letter) - \(section!.professor)")
+                        VStack {
+                            HStack {
+                                Text("\(professor!.name)")
+                                Spacer()
+                                if reviewsViewable {
+                                    Button(action: {
+                                        self.reviewsPresented = true
+                                    }) {
+                                        Image(systemName: "info.circle.fill").resizable().frame(width: 22, height: 22)
+                                    }
+                                }
+                            }
+                            ForEach(professor!.sections, id: \.self) { section in
+                                HStack {
+                                    Text("Section \(section.letter) | \(section.days) | \(section.time)").font(Font.system(size: 8))
+                                    Spacer()
+                                }
+                            }
+                        }
                         Spacer()
+                        
                     }
-                    .padding([.top, .leading, .trailing], 10)
+                    .padding([.top, .leading], 10)
                     Divider()
                     HStack {
                         HStack {
                             Spacer()
                             VStack {
-                                Text("GPA")
-                                Text(String(format: "%.2f", section!.avgGPA))
+                                Text("GPA").bold()
+                                Text(String(format: "%.2f", professor!.avgGPA))
                             }
                             Spacer()
                         }
@@ -33,8 +54,8 @@ struct SectionView: View {
                         HStack {
                             Spacer()
                             VStack {
-                                Text("Quality")
-                                Text(String(format: "%.2f", section!.quality))
+                                Text("Quality").bold()
+                                Text(String(format: "%.2f", professor!.quality))
                             }
                             Spacer()
                         }
@@ -42,8 +63,8 @@ struct SectionView: View {
                         HStack {
                             Spacer()
                             VStack {
-                                Text("Easiness")
-                                Text(String(format: "%.2f", section!.easiness))
+                                Text("Easiness").bold()
+                                Text(String(format: "%.2f", professor!.easiness))
                             }
                             Spacer()
                         }
@@ -65,11 +86,14 @@ struct SectionView: View {
                 }.background(Color("item_unselected"))
             }
         }
+        .sheet(isPresented: $reviewsPresented) {
+            Text("Reviews")
+        }
     }
 }
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(section: Constants.sampleSection)
+        SectionView(professor: Constants.sampleProfessor, reviewsViewable: true)
     }
 }

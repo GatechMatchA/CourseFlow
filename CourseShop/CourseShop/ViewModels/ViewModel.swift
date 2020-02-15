@@ -15,4 +15,5 @@ class ViewModel: ObservableObject {
     var displayedCourses: [Course] {
         allCourses.filter { $0.courseName.starts(with: searchStr) || $0.courseNum.starts(with: searchStr)}
     }
+    @Published var modalPresented = false
 }

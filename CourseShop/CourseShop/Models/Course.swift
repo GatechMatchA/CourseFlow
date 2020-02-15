@@ -9,10 +9,11 @@
 import Foundation
 
 struct Course: Hashable {
+    var cID: String = "\(UUID())"
     var courseNum: String
     var courseName: String
     var numCredits: Int
-    var selectedSection: Section?
+    var selectedProfessor: Professor?
     
     static func == (lhs: Course, rhs: Course) -> Bool {
         return lhs.hashValue == rhs.hashValue

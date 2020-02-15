@@ -39,7 +39,7 @@ struct CourseHeaderView: View {
         .foregroundColor(Color("primary_text_color"))
         .font(Font.custom("Aventir", size: 12))
         .sheet(isPresented: $infoPresented, onDismiss: nil) {
-            Text("Course info for \(self.course.courseNum): \(self.course.courseName)")
+            CourseDetailView(courseDetailViewModel: CourseDetailViewModel(), course: self.course)
         }
     }
 }

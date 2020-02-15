@@ -11,9 +11,29 @@ import SwiftUI
 struct ContentView: View {
     @State var searchStr = ""
     @EnvironmentObject var dataModel: DataModel
+    @EnvironmentObject var viewModel: ViewModel
+    @State var isPresented = false
     var body: some View {
-        NavigationView {
-            CourseSelectView()
+        TabView {
+            NavigationView {
+                CourseSelectView()
+            }
+            .tabItem {
+                Image(systemName: "list.bullet")
+                Text("Compare")
+            }.tag(0)
+            Text("Reviews")
+            .tabItem {
+                Image(systemName: "plus.circle")
+                Text("Review")
+            }.tag(1)
+            Text("Profile")
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("Profile")
+            }
+        }.sheet(isPresented: $viewModel.modalPresented) {
+            Text("Make a review")
         }
     }
 }
