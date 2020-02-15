@@ -13,7 +13,7 @@ struct CourseCompareView: View {
     
     var body: some View {
         VStack {
-            SortBar(sort: self.viewModel.sort(by:))
+            SortBar(sort: self.viewModel.sort(by:)).foregroundColor(Color("primary_text_color"))
             Divider()
             ScrollView {
                 ForEach(viewModel.selectedCourses, id: \.self) { course in
