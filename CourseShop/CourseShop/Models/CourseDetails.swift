@@ -13,5 +13,5 @@ struct CourseDetails {
     var summary: String
     var prereqs: String?
     var attributes: String?
-    var campuses: String
+    var restrictions: String
 }

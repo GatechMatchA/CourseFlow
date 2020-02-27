@@ -34,7 +34,7 @@ struct CourseCompareView: View {
                         }))) {
                             VStack {
                                 CourseHeaderView(course: course)
-                                SectionView(professor: course.selectedProfessor, reviewsViewable: false)
+                                SectionView(course: course, professor: course.selectedProfessor, reviewsViewable: false)
                                     .frame(height: 120)
                             }
                             .padding()
@@ -42,7 +42,7 @@ struct CourseCompareView: View {
                     }
                 }
                 .navigationBarTitle(Text("Compare"))
-            }
+            }.padding(.top, -8)
         }
     }
 }

@@ -12,7 +12,12 @@ struct Professor: Hashable {
     var pID: String = "\(UUID())"
     var name: String
     var sections: [Section]
+    var gpas: [String:Double]
     var avgGPA: Double
-    var easiness: Double
-    var quality: Double
+    var avgEasiness: Double
+    var avgQuality: Double
+    
+    var gpaChartData: [(String, Double)] {
+        gpas.enumerated().map({($1.key.capitalized, $1.value * 100)}).sorted(by: { $0.0 < $1.0 })
+    }
 }

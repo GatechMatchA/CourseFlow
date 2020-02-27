@@ -9,10 +9,14 @@
 import Foundation
 
 struct Review: Hashable {
+    var rid: String
     var uid: String
-    var profilePicData: Data
-    var details: String
+    var cid: String
+    var profilePicData: Data?
+    var comments: String
     var upVotes: Int
     var downVotes: Int
     var tags: [String]
+    var quality: Double?
+    var easiness: Double?
 }

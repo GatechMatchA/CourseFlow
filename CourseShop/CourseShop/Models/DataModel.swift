@@ -10,4 +10,9 @@ import Foundation
 
 class DataModel: ObservableObject {
     @Published var courses: [Course] = []
+    @Published var user: User
+    
+    init(user: User) {
+        self.user = user
+    }
 }

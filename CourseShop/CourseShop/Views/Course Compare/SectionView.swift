@@ -9,9 +9,12 @@
 import SwiftUI
 
 struct SectionView: View {
+    var course: Course
     var professor: Professor?
     var reviewsViewable: Bool
     @State var reviewsPresented: Bool = false
+    
+    @EnvironmentObject var dataModel: DataModel
     var body: some View {
         Group {
             if professor != nil {
@@ -55,7 +58,7 @@ struct SectionView: View {
                             Spacer()
                             VStack {
                                 Text("Quality").bold()
-                                Text(String(format: "%.2f", professor!.quality))
+                                Text(String(format: "%.2f", professor!.avgQuality))
                             }
                             Spacer()
                         }
@@ -64,7 +67,7 @@ struct SectionView: View {
                             Spacer()
                             VStack {
                                 Text("Easiness").bold()
-                                Text(String(format: "%.2f", professor!.easiness))
+                                Text(String(format: "%.2f", professor!.avgEasiness))
                             }
                             Spacer()
                         }
@@ -78,7 +81,7 @@ struct SectionView: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        Text("Tap to select a section")
+                        Text("Tap to select a professor")
                             .foregroundColor(Color("primary_text_color"))
                         Spacer()
                     }
@@ -87,13 +90,13 @@ struct SectionView: View {
             }
         }
         .sheet(isPresented: $reviewsPresented) {
-            Text("Reviews")
+            ProfessorDetailView(professorDetailViewModel: ProfessorDetailViewModel(course: self.course, professor: self.professor!)).environmentObject(self.dataModel)
         }
     }
 }
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(professor: Constants.sampleProfessor, reviewsViewable: true)
+        SectionView(course: Constants.sampleCourse, professor: Constants.sampleProfessor, reviewsViewable: true)
     }
 }

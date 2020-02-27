@@ -47,6 +47,13 @@ struct CourseSelectView: View {
             .padding(.bottom, 10)
             .padding(.top, 2)
         }
+        .onAppear(perform: {
+            self.viewModel.loadCourses(onSuccess: {
+                print("Loaded courses")
+            }) { (errorDescription) in
+                print(errorDescription)
+            }
+        })
         .navigationBarTitle("Course Select", displayMode: .inline)
     }
 }

@@ -17,6 +17,7 @@ struct SectionCompare: View {
         LoadingView(isShowing: $isLoading) {
             VStack {
                 SortBar(sort: self.professorSelectViewModel.sort(by:)).foregroundColor(Color("primary_text_color"))
+                Divider()
                 ScrollView {
                     ForEach(self.professorSelectViewModel.professors, id: \.self) { professor in
                         ZStack {
@@ -25,7 +26,7 @@ struct SectionCompare: View {
                                 self.course.selectedProfessor = professor
                                 self.presentationMode.wrappedValue.dismiss()
                             }) {
-                                SectionView(professor: professor, reviewsViewable: true)
+                                SectionView(course: self.course, professor: professor, reviewsViewable: true)
                             }
                         }
                             .padding([.leading, .trailing], 10)
@@ -33,7 +34,8 @@ struct SectionCompare: View {
                     }
                     Divider()
                     Spacer()
-                }
+                }.padding(.top, -8)
+                
             }
         }.onAppear {
             self.professorSelectViewModel.loadProfessors(for: self.course) {

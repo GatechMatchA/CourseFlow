@@ -13,7 +13,7 @@ class ViewModel: ObservableObject {
     @Published var allCourses: [Course] = []
     @Published var searchStr = ""
     var displayedCourses: [Course] {
-        allCourses.filter { $0.courseName.starts(with: searchStr) || $0.courseNum.starts(with: searchStr)}
+        allCourses.filter { searchStr == "" || $0.courseName.capitalized.contains(searchStr.capitalized) || $0.courseNum.capitalized.contains(searchStr.capitalized)}
     }
     @Published var modalPresented = false
     
@@ -25,12 +25,24 @@ class ViewModel: ObservableObject {
         case "GPA":
             sorted = valid.sorted { $0.selectedProfessor!.avgGPA > $1.selectedProfessor!.avgGPA }
         case "Quality":
-            sorted = valid.sorted { $0.selectedProfessor!.quality > $1.selectedProfessor!.quality }
+            sorted = valid.sorted { $0.selectedProfessor!.avgQuality > $1.selectedProfessor!.avgQuality }
         case "Easiness":
-            sorted = valid.sorted { $0.selectedProfessor!.easiness > $1.selectedProfessor!.easiness }
+            sorted = valid.sorted { $0.selectedProfessor!.avgEasiness > $1.selectedProfessor!.avgEasiness }
         default:
             sorted = valid
         }
         self.selectedCourses = sorted + invalid
+    }
+    
+    func loadCourses(onSuccess: @escaping () -> Void, onFail: @escaping (String) -> Void) {
+        let courseReq = CourseRequest()
+        courseReq.getAllCourses(onSuccess: { (courses) in
+            print(courses)
+            DispatchQueue.main.async {
+                self.allCourses = courses
+            }
+        }) { (error) in
+            print(error)
+        }
     }
 }

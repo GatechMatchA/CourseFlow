@@ -25,27 +25,42 @@ struct CourseDetailView: View {
                 }
                 LoadingView(isShowing: $isLoading) {
                     VStack {
+                        HStack {
+                            Spacer()
+                            VStack {
+                                Text("\(self.courseDetailViewModel.courseDetails.course.courseNum)").font(.largeTitle)
+                                Text("\(self.courseDetailViewModel.courseDetails.course.courseName)").font(.headline).multilineTextAlignment(.center)
+                                Text("\(self.courseDetailViewModel.courseDetails.course.numCredits) Credits")
+                            }
+                            Spacer()
+                            }.padding().background(Color("item_selected"))
                         VStack {
-                            Text("\(self.courseDetailViewModel.courseDetails.course.courseNum)").font(.largeTitle)
-                            Text("\(self.courseDetailViewModel.courseDetails.course.courseName)").font(.headline).multilineTextAlignment(.center)
-                            Text("\(self.courseDetailViewModel.courseDetails.course.numCredits) Credits")
+                            Group {
+                                self.leadingText(Text("Course Summary:").bold()).padding(.top, 5)
+                                self.leadingText(Text("\(self.courseDetailViewModel.courseDetails.summary)"))
+                                Divider()
+                                self.leadingText(Text("Restrictions:").bold())
+                                self.leadingText(Text("\(self.courseDetailViewModel.courseDetails.restrictions)"))
+                            }
+                            if self.courseDetailViewModel.courseDetails.prereqs != nil {
+                                Divider()
+                            }
+                            self.leadingText(self.optionalTitle(variable: self.courseDetailViewModel.courseDetails.prereqs, title: "Prerequisites:").map { Text($0).bold() })
+                            self.leadingText(self.courseDetailViewModel.courseDetails.prereqs.map { Text($0) })
+                            if self.courseDetailViewModel.courseDetails.attributes != nil {
+                                Divider()
+                            }
+                            self.leadingText(self.optionalTitle(variable: self.courseDetailViewModel.courseDetails.attributes, title: "Attributes:").map { Text($0).bold() })
+                            self.leadingText(self.courseDetailViewModel.courseDetails.attributes.map { Text("Attributes: \($0)") })
                         }
                         Spacer()
-                        self.leadingText(Text("Campuses offered:").bold())
-                        self.leadingText(Text("\(self.courseDetailViewModel.courseDetails.campuses)"))
-                        self.leadingText(Text("Course Summary:").bold()).padding(.top, 5)
-                        self.leadingText(Text("\(self.courseDetailViewModel.courseDetails.summary)"))
-                        self.leadingText(self.courseDetailViewModel.courseDetails.prereqs.map { Text($0) })
-                        self.leadingText(self.courseDetailViewModel.courseDetails.attributes.map { Text("Attributes: \($0)") })
-                        Spacer()
-                    }
+                    }.background(Color("item_unselected"))
                 }
-                Spacer()
         }.onAppear {
             self.courseDetailViewModel.loadCourseDetails(for: self.course) {
                 self.isLoading = false
             }
-        }
+        }.background(Color("item_selected")).edgesIgnoringSafeArea(.bottom)
     }
     
     func leadingText(_ text: Text?) -> some View {
@@ -53,6 +68,12 @@ struct CourseDetailView: View {
             text.padding(.leading)
             Spacer()
         }
+    }
+    func optionalTitle(variable: Any?, title: String) -> String? {
+        if let _ = variable {
+            return title
+        }
+        return nil
     }
 }
 
