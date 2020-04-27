@@ -15,8 +15,10 @@
 		5A01045123F7BD35002BA509 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01045023F7BD35002BA509 /* StarRating.swift */; };
 		5A01045323F7C0ED002BA509 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01045223F7C0ED002BA509 /* FloatRatingView.swift */; };
 		5A01045523F7CA13002BA509 /* ProfessorDetailRatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01045423F7CA13002BA509 /* ProfessorDetailRatingsView.swift */; };
-		5A01045823F7CD50002BA509 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5A01045723F7CD50002BA509 /* SwiftUICharts */; };
+		5A01045823F7CD50002BA509 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5A01045723F7CD50002BA509 /* SwiftPackageProductDependency */; };
 		5A01045A23F8953D002BA509 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01045923F8953D002BA509 /* User.swift */; };
+		5A2F831F2456809B0061C56E /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F831E2456809B0061C56E /* UserRequest.swift */; };
+		5A2F832124568CA10061C56E /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F832024568CA10061C56E /* ScheduleView.swift */; };
 		5A869A4A23F2573A0026B555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A869A4923F2573A0026B555 /* AppDelegate.swift */; };
 		5A869A4C23F2573A0026B555 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A869A4B23F2573A0026B555 /* SceneDelegate.swift */; };
 		5A869A4E23F2573A0026B555 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A869A4D23F2573A0026B555 /* ContentView.swift */; };
@@ -42,6 +44,9 @@
 		5A9A976623F776120083434F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A976523F776120083434F /* LoadingView.swift */; };
 		5A9A976823F77D6F0083434F /* CourseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A976723F77D6F0083434F /* CourseDetailViewModel.swift */; };
 		5A9A976A23F77DF80083434F /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A976923F77DF80083434F /* CourseDetailView.swift */; };
+		5AA51EE8243AB161007B5CB0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA51EE7243AB161007B5CB0 /* ProfileView.swift */; };
+		5ADFBDBD24563D9C00C31BF7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFBDBC24563D9C00C31BF7 /* LoginView.swift */; };
+		5AE3425224568F6200B967AC /* CalendarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3425124568F6200B967AC /* CalendarComponent.swift */; };
 		5AFF63A2240690D20020832C /* ReviewCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF63A1240690D20020832C /* ReviewCreateView.swift */; };
 		5AFF63A42406923F0020832C /* ReviewCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF63A32406923F0020832C /* ReviewCreateViewModel.swift */; };
 		5AFF63A6240694410020832C /* ReviewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF63A5240694410020832C /* ReviewComponent.swift */; };
@@ -51,6 +56,7 @@
 		5AFF63AF2406A8240020832C /* CourseShopRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF63AE2406A8240020832C /* CourseShopRequest.swift */; };
 		5AFF63B12406AABE0020832C /* ProfessorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF63B02406AABE0020832C /* ProfessorRequest.swift */; };
 		5AFF63B32406AD070020832C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF63B22406AD070020832C /* ReviewRequest.swift */; };
+		5FC355283BD09EA0E2FB259D /* Pods_CourseShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1459177448700500147B76 /* Pods_CourseShop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +69,8 @@
 		5A01045223F7C0ED002BA509 /* FloatRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
 		5A01045423F7CA13002BA509 /* ProfessorDetailRatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorDetailRatingsView.swift; sourceTree = "<group>"; };
 		5A01045923F8953D002BA509 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5A2F831E2456809B0061C56E /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		5A2F832024568CA10061C56E /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		5A869A4623F2573A0026B555 /* CourseShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A869A4923F2573A0026B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A869A4B23F2573A0026B555 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +98,9 @@
 		5A9A976523F776120083434F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		5A9A976723F77D6F0083434F /* CourseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewModel.swift; sourceTree = "<group>"; };
 		5A9A976923F77DF80083434F /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
+		5AA51EE7243AB161007B5CB0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5ADFBDBC24563D9C00C31BF7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5AE3425124568F6200B967AC /* CalendarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarComponent.swift; sourceTree = "<group>"; };
 		5AFF63A1240690D20020832C /* ReviewCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCreateView.swift; sourceTree = "<group>"; };
 		5AFF63A32406923F0020832C /* ReviewCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCreateViewModel.swift; sourceTree = "<group>"; };
 		5AFF63A5240694410020832C /* ReviewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewComponent.swift; sourceTree = "<group>"; };
@@ -99,6 +110,9 @@
 		5AFF63AE2406A8240020832C /* CourseShopRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseShopRequest.swift; sourceTree = "<group>"; };
 		5AFF63B02406AABE0020832C /* ProfessorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorRequest.swift; sourceTree = "<group>"; };
 		5AFF63B22406AD070020832C /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
+		6C5F10B56BD69708DD8A6D09 /* Pods-CourseShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourseShop.debug.xcconfig"; path = "Target Support Files/Pods-CourseShop/Pods-CourseShop.debug.xcconfig"; sourceTree = "<group>"; };
+		8F1459177448700500147B76 /* Pods_CourseShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CourseShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6AEC942CE157C8946F6E0F6 /* Pods-CourseShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourseShop.release.xcconfig"; path = "Target Support Files/Pods-CourseShop/Pods-CourseShop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,13 +120,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A01045823F7CD50002BA509 /* SwiftUICharts in Frameworks */,
+				5A01045823F7CD50002BA509 /* BuildFile in Frameworks */,
+				5FC355283BD09EA0E2FB259D /* Pods_CourseShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		597EB8B9014BBA80780A7BB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F1459177448700500147B76 /* Pods_CourseShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5A01044723F7A701002BA509 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +153,8 @@
 			children = (
 				5A869A4823F2573A0026B555 /* CourseShop */,
 				5A869A4723F2573A0026B555 /* Products */,
+				D8A58D4E998A0054E6F51C0E /* Pods */,
+				597EB8B9014BBA80780A7BB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +173,7 @@
 				5A869A4B23F2573A0026B555 /* SceneDelegate.swift */,
 				5A869A6F23F276B00026B555 /* Constants.swift */,
 				5A9A976523F776120083434F /* LoadingView.swift */,
+				5AE3425324568F8600B967AC /* ViewRepresentables */,
 				5AFF63A92406A6F80020832C /* Networking */,
 				5A9A976423F775F80083434F /* Models */,
 				5A9A976323F775EA0083434F /* ViewModels */,
@@ -174,7 +200,10 @@
 			children = (
 				5A869A5D23F25EE30026B555 /* SearchBar.swift */,
 				5A869A4D23F2573A0026B555 /* ContentView.swift */,
-				5AFF63A1240690D20020832C /* ReviewCreateView.swift */,
+				5ADFBDBC24563D9C00C31BF7 /* LoginView.swift */,
+				5A2F832024568CA10061C56E /* ScheduleView.swift */,
+				5AF2427E243AB6F80023A7CD /* Review Create */,
+				5AA51EE9243AB168007B5CB0 /* Profile */,
 				5A01044723F7A701002BA509 /* ReusableViews */,
 				5A9A976023F74E340083434F /* Section Compare */,
 				5A869A7C23F285590026B555 /* Course Select */,
@@ -248,6 +277,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5AA51EE9243AB168007B5CB0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5AA51EE7243AB161007B5CB0 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5AE3425324568F8600B967AC /* ViewRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				5AE3425124568F6200B967AC /* CalendarComponent.swift */,
+			);
+			path = ViewRepresentables;
+			sourceTree = "<group>";
+		};
+		5AF2427E243AB6F80023A7CD /* Review Create */ = {
+			isa = PBXGroup;
+			children = (
+				5AFF63A1240690D20020832C /* ReviewCreateView.swift */,
+			);
+			path = "Review Create";
+			sourceTree = "<group>";
+		};
 		5AFF63A92406A6F80020832C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,8 +309,18 @@
 				5AFF63AC2406A7ED0020832C /* CourseRequest.swift */,
 				5AFF63B02406AABE0020832C /* ProfessorRequest.swift */,
 				5AFF63B22406AD070020832C /* ReviewRequest.swift */,
+				5A2F831E2456809B0061C56E /* UserRequest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		D8A58D4E998A0054E6F51C0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C5F10B56BD69708DD8A6D09 /* Pods-CourseShop.debug.xcconfig */,
+				B6AEC942CE157C8946F6E0F6 /* Pods-CourseShop.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +330,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A869A5A23F2573D0026B555 /* Build configuration list for PBXNativeTarget "CourseShop" */;
 			buildPhases = (
+				D7242BD5D0DE2869792AE262 /* [CP] Check Pods Manifest.lock */,
 				5A869A4223F2573A0026B555 /* Sources */,
 				5A869A4323F2573A0026B555 /* Frameworks */,
 				5A869A4423F2573A0026B555 /* Resources */,
@@ -277,7 +341,7 @@
 			);
 			name = CourseShop;
 			packageProductDependencies = (
-				5A01045723F7CD50002BA509 /* SwiftUICharts */,
+				5A01045723F7CD50002BA509 /* SwiftPackageProductDependency */,
 			);
 			productName = CourseShop;
 			productReference = 5A869A4623F2573A0026B555 /* CourseShop.app */;
@@ -308,7 +372,7 @@
 			);
 			mainGroup = 5A869A3D23F2573A0026B555;
 			packageReferences = (
-				5A01045623F7CD50002BA509 /* XCRemoteSwiftPackageReference "ChartView" */,
+				5A01045623F7CD50002BA509 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 5A869A4723F2573A0026B555 /* Products */;
 			projectDirPath = "";
@@ -332,6 +396,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D7242BD5D0DE2869792AE262 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CourseShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A869A4223F2573A0026B555 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -346,15 +435,19 @@
 				5A01045A23F8953D002BA509 /* User.swift in Sources */,
 				5A01044F23F7AC20002BA509 /* ProfessorDetailViewModel.swift in Sources */,
 				5A869A4A23F2573A0026B555 /* AppDelegate.swift in Sources */,
+				5AE3425224568F6200B967AC /* CalendarComponent.swift in Sources */,
+				5A2F832124568CA10061C56E /* ScheduleView.swift in Sources */,
 				5A869A6A23F272C00026B555 /* CourseItemView.swift in Sources */,
 				5A9A975F23F748060083434F /* ProfessorSelectViewModel.swift in Sources */,
 				5AFF63AD2406A7ED0020832C /* CourseRequest.swift in Sources */,
 				5AFF63A824069BD10020832C /* MultilineTextField.swift in Sources */,
+				5AA51EE8243AB161007B5CB0 /* ProfileView.swift in Sources */,
 				5A869A6823F272610026B555 /* CourseSelectView.swift in Sources */,
 				5AFF63A6240694410020832C /* ReviewComponent.swift in Sources */,
 				5A9A976A23F77DF80083434F /* CourseDetailView.swift in Sources */,
 				5A869A6E23F275A90026B555 /* DataModel.swift in Sources */,
 				5A869A7423F280400026B555 /* Section.swift in Sources */,
+				5A2F831F2456809B0061C56E /* UserRequest.swift in Sources */,
 				5A869A5E23F25EE30026B555 /* SearchBar.swift in Sources */,
 				5A01044B23F7A98E002BA509 /* Professor.swift in Sources */,
 				5A01045123F7BD35002BA509 /* StarRating.swift in Sources */,
@@ -372,6 +465,7 @@
 				5A01045323F7C0ED002BA509 /* FloatRatingView.swift in Sources */,
 				5AFF63B32406AD070020832C /* ReviewRequest.swift in Sources */,
 				5A869A8023F2925D0026B555 /* SectionCompare.swift in Sources */,
+				5ADFBDBD24563D9C00C31BF7 /* LoginView.swift in Sources */,
 				5A869A7823F284DD0026B555 /* CourseCompareView.swift in Sources */,
 				5A869A7223F278E30026B555 /* ViewModel.swift in Sources */,
 				5A869A4E23F2573A0026B555 /* ContentView.swift in Sources */,
@@ -510,6 +604,7 @@
 		};
 		5A869A5B23F2573D0026B555 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C5F10B56BD69708DD8A6D09 /* Pods-CourseShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +625,7 @@
 		};
 		5A869A5C23F2573D0026B555 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6AEC942CE157C8946F6E0F6 /* Pods-CourseShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -572,7 +668,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5A01045623F7CD50002BA509 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+		5A01045623F7CD50002BA509 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView";
 			requirement = {
@@ -583,9 +679,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5A01045723F7CD50002BA509 /* SwiftUICharts */ = {
+		5A01045723F7CD50002BA509 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5A01045623F7CD50002BA509 /* XCRemoteSwiftPackageReference "ChartView" */;
+			package = 5A01045623F7CD50002BA509 /* RemoteSwiftPackageReference */;
 			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */

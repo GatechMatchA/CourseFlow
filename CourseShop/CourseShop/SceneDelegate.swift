@@ -20,6 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
+        // UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.red]
+        UINavigationBar.appearance().backgroundColor = UIColor(named: "item_selected")
         let contentView = ContentView()
         let dataModel = DataModel(user: Constants.sampleUser)
         let viewModel = ViewModel()

@@ -49,7 +49,7 @@ struct SectionView: View {
                             Spacer()
                             VStack {
                                 Text("GPA").bold()
-                                Text(String(format: "%.2f", professor!.avgGPA))
+                                Text(String(format: "%.1f", professor!.avgGPA)) + Text("/4").font(.footnote)
                             }
                             Spacer()
                         }
@@ -58,7 +58,7 @@ struct SectionView: View {
                             Spacer()
                             VStack {
                                 Text("Quality").bold()
-                                Text(String(format: "%.2f", professor!.avgQuality))
+                                Text(String(format: "%.1f", professor!.avgQuality)) + Text("/5").font(.footnote)
                             }
                             Spacer()
                         }
@@ -67,7 +67,7 @@ struct SectionView: View {
                             Spacer()
                             VStack {
                                 Text("Easiness").bold()
-                                Text(String(format: "%.2f", professor!.avgEasiness))
+                                Text(String(format: "%.1f", professor!.avgEasiness)) + Text("/5").font(.footnote)
                             }
                             Spacer()
                         }

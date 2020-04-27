@@ -1,0 +1,6 @@
+framework module Pods_CourseShop {
+  umbrella header "Pods-CourseShop-umbrella.h"
+
+  export *
+  module * { export * }
+}

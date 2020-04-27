@@ -17,7 +17,7 @@ struct ProfessorDetailRatingsView: View {
             VStack {
                 VStack {
                     Text("Quality").bold()
-                    Text("(\(Int.random(in: 1...25)))").padding(.bottom, -10).padding(.top, 3).minimumScaleFactor(0.7)
+                    Text("\(Int.random(in: 1...25)) ratings").padding(.bottom, -10).padding(.top, 3).minimumScaleFactor(0.7)
                     StarRating(maxRating: 5, rating: Binding.constant(professor.avgQuality), ratingType: .floatRatings, editable: false).frame(height: 20)
                     Text(String(format: "%.2f%/5", professor.avgQuality)).padding(.top, -10)
                     // Text("\(professor.quality.count) ratings")

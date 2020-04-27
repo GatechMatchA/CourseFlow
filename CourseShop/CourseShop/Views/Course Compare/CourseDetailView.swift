@@ -37,10 +37,10 @@ struct CourseDetailView: View {
                         VStack {
                             Group {
                                 self.leadingText(Text("Course Summary:").bold()).padding(.top, 5)
-                                self.leadingText(Text("\(self.courseDetailViewModel.courseDetails.summary)"))
-                                Divider()
+                                self.leadingText(Text("\(self.courseDetailViewModel.courseDetails.summary)")).padding(.top).background(Color("mint"))
+                                
                                 self.leadingText(Text("Restrictions:").bold())
-                                self.leadingText(Text("\(self.courseDetailViewModel.courseDetails.restrictions)"))
+                                self.leadingText(Text("\(self.courseDetailViewModel.courseDetails.restrictions)")).padding([.top, .bottom]).background(Color("mint"))
                             }
                             if self.courseDetailViewModel.courseDetails.prereqs != nil {
                                 Divider()

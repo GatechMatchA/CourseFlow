@@ -15,31 +15,47 @@ struct ContentView: View {
     @EnvironmentObject var reviewCreateViewModel: ReviewCreateViewModel
     @State var isPresented = false
     var body: some View {
-        TabView {
-            NavigationView {
-                CourseSelectView()
-                .environmentObject(viewModel)
+        Group {
+            if dataModel.loggedIn {
+                TabView {
+                    NavigationView {
+                        CourseSelectView()
+                        .environmentObject(viewModel)
+                    }
+                    .tabItem {
+                        Image(systemName: "list.bullet")
+                        Text("Compare")
+                    }.tag(0)
+                    NavigationView {
+                        ScheduleView()
+                        .environmentObject(dataModel)
+                        .navigationBarTitle("Schedule", displayMode: .inline)
+                        .navigationBarHidden(true)
+                    }.tabItem {
+                        Image(systemName: "calendar")
+                        Text("Schedule")
+                    }.tag(1)
+                    NavigationView {
+                        ReviewCreateView()
+                        .environmentObject(reviewCreateViewModel)
+                        .environmentObject(dataModel)
+                        .navigationBarTitle("Review", displayMode: .inline)
+                    }
+                    .tabItem {
+                        Image(systemName: "plus.circle")
+                        Text("Review")
+                    }.tag(2)
+                    ProfileView(user: Constants.sampleUser)
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("Profile")
+                    }.tag(3)
+                }.sheet(isPresented: $viewModel.modalPresented) {
+                    Text("Make a review")
+                }.edgesIgnoringSafeArea([])
+            } else {
+                LoginView()
             }
-            .tabItem {
-                Image(systemName: "list.bullet")
-                Text("Compare")
-            }.tag(0)
-            NavigationView {
-                ReviewCreateView()
-                .environmentObject(reviewCreateViewModel)
-                    .navigationBarTitle("Review", displayMode: .inline)
-            }
-            .tabItem {
-                Image(systemName: "plus.circle")
-                Text("Review")
-            }.tag(1)
-            Text("Profile")
-            .tabItem {
-                Image(systemName: "person.fill")
-                Text("Profile")
-            }
-        }.sheet(isPresented: $viewModel.modalPresented) {
-            Text("Make a review")
         }
     }
 }

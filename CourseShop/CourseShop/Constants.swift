@@ -29,7 +29,7 @@ struct Constants {
     static var testSectionC = Section(letter: "C", days: "TR", time: "1:30 - 2:20")
     static var testSectionD = Section(letter: "D", days: "TR", time: "2:00 - 2:50")
     
-    static var sampleUser = User(uid: "\(UUID())", upvotedReviews: [], downvotedReviews: [], reviews: [])
+    static var sampleUser = User(username: "sarah.t", uid: "\(UUID())", upvotedReviews: [], downvotedReviews: [], reviews: [], password: "password")
     
     static var sampleCourse = Course(courseNum: "CS 1331", courseName: "Introduction to Object Oriented Programming", numCredits: 3)
     static var placeholderCourse = Course(courseNum: "AA 0000", courseName: "Loading Course Name", numCredits: 0)

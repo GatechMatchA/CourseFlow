@@ -15,7 +15,7 @@ class ReviewCreateViewModel: ObservableObject {
     @Published var easiness: Double = 0.0
     @Published var comments: String = ""
     
-    func createReview(fail: @escaping (String) -> Void) {
+    func createReview(user: User, fail: @escaping (String) -> Void) {
         if quality < 1 {
             fail("Quality must be greater than or equal to one star.")
         } else {
@@ -32,7 +32,7 @@ class ReviewCreateViewModel: ObservableObject {
                 "easiness": easiness == 0 ? -1 : easiness,
                 "comments": comments
             ]
-            reviewReq.createReview(data: data, onSuccess: {
+            reviewReq.createReview(user: user, data: data, onSuccess: {
                 print("Success!")
             }) { (error) in
                 print(error)

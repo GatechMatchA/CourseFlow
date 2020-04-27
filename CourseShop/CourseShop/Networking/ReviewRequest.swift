@@ -9,10 +9,9 @@
 import Foundation
 
 class ReviewRequest: CourseShopRequest {
-    
-    func createReview(data: [String: Any], onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
+    func createReview(user: User, data: [String: Any], onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
         let path = "/reviews/new"
-        guard let creds = "user1:test".data(using: .utf8)?.base64EncodedString() else {
+        guard let creds = "\(user.username):\(user.password)".data(using: .utf8)?.base64EncodedString() else {
             onFail(CustomError("Credentials failed to be encoded"))
             return
         }

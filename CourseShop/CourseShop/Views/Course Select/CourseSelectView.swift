@@ -42,7 +42,7 @@ struct CourseSelectView: View {
                 .foregroundColor(Color("secondary_text_color"))
             }
             .frame(width: 300, height: 50)
-            .background(Color("theme_color"))
+            .background(viewModel.selectedCourses.count > 0 ? Color("theme_color") : .gray)
             .cornerRadius(25)
             .padding(.bottom, 10)
             .padding(.top, 2)

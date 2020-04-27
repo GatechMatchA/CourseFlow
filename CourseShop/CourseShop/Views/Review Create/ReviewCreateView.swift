@@ -10,21 +10,23 @@ import SwiftUI
 
 struct ReviewCreateView: View {
     @EnvironmentObject var viewModel: ReviewCreateViewModel
+    @EnvironmentObject var dataModel: DataModel
     @ObservedObject private var kGuardian = KeyboardGuardian(textFieldCount: 3)
     var body: some View {
         ScrollView {
             VStack {
-                ReviewComponent(title: "Professor Name", input: TextField("i.e. John Doe", text: $viewModel.profName).textFieldStyle(RoundedBorderTextFieldStyle())).background(GeometryGetter(rect: $kGuardian.rects[0]))
+                ReviewComponent(title: "Professor Name", input: TextField("i.e. John Doe", text: $viewModel.profName).textFieldStyle(RoundedBorderTextFieldStyle()))//.background(GeometryGetter(rect: $kGuardian.rects[0]))
                 
-                ReviewComponent(title: "Course Number", input: TextField("i.e. AB 7890", text: $viewModel.courseNum).textFieldStyle(RoundedBorderTextFieldStyle())).background(GeometryGetter(rect: $kGuardian.rects[1]))
+                ReviewComponent(title: "Course Number", input: TextField("i.e. AB 7890", text: $viewModel.courseNum).textFieldStyle(RoundedBorderTextFieldStyle()))//.background(GeometryGetter(rect: $kGuardian.rects[1]))
                 
                 ReviewComponent(title: "Quality", input: StarRating(maxRating: 5, rating: $viewModel.quality, ratingType: .wholeRatings, editable: true).frame(height: 30))
                 
                 ReviewComponent(title: "Easiness", input: StarRating(maxRating: 5, rating: $viewModel.easiness, ratingType: .wholeRatings, editable: true).frame(height: 30))
                 
-                ReviewComponent(title: "Other comments", input: MultilineTextField("i.e. Tough homework.", text: $viewModel.comments).background(GeometryGetter(rect: $kGuardian.rects[2])).offset(y: kGuardian.slide).animation(.easeInOut(duration: 0.25)))
+                ReviewComponent(title: "Other comments", input: MultilineTextField("i.e. Tough homework.", text: $viewModel.comments)//.background(GeometryGetter(rect: $kGuardian.rects[2])).offset(y: kGuardian.slide).animation(.easeInOut(duration: 0.25))
+                )
                 Button(action: {
-                    self.viewModel.createReview { (error) in
+                    self.viewModel.createReview(user: self.dataModel.user) { (error) in
                         print(error)
                     }
                 }) {

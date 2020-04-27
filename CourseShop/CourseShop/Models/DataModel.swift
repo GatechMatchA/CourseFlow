@@ -11,8 +11,23 @@ import Foundation
 class DataModel: ObservableObject {
     @Published var courses: [Course] = []
     @Published var user: User
-    
+    @Published var loggedIn = false
     init(user: User) {
         self.user = user
+    }
+    
+    func login(username: String, password: String) {
+        UserRequest().loginUser(username: username, password: password, onSuccess: {
+            self.loggedIn = true
+        }) { (err) in
+            print(err)
+        }
+    }
+    func signUp(username: String, password: String) {
+        UserRequest().signUpUser(username: username, password: password, onSuccess: {
+            self.loggedIn = true
+        }) { (err) in
+            print(err)
+        }
     }
 }

@@ -35,7 +35,7 @@ class HttpRequest {
         }
     }
     
-    static func makePostRequest(urlString: String, authVal: String, data: [String: Any], success: @escaping (_ data: [String: Any]) -> Void, fail: @escaping (_ error: Error) -> Void) {
+    static func makePostRequest(urlString: String, authVal: String?, data: [String: Any], success: @escaping (_ data: [String: Any]) -> Void, fail: @escaping (_ error: Error) -> Void) {
         guard let dbURL = URL(string: urlString) else {
             fail(CustomError("HttpRequest.makePostRequest: Invalid URL"))
             return
@@ -44,7 +44,9 @@ class HttpRequest {
         
         dbRequest.httpMethod = "POST"
         dbRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        dbRequest.addValue(authVal, forHTTPHeaderField: "Authorization")
+        if let authVal = authVal {
+            dbRequest.addValue(authVal, forHTTPHeaderField: "Authorization")
+        }
         do {
             dbRequest.httpBody = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
             let task = URLSession.shared.dataTask(with: dbRequest) { (data, response, error) in
