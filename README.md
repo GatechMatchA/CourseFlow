@@ -1,1 +1,1 @@
-# CourseFlow
+# CourseShop
