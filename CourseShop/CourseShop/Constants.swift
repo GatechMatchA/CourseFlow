@@ -24,10 +24,12 @@ struct Constants {
         Professor(name: "John Stasko", sections: [Constants.testSectionD], gpas: ["a": 0.32, "b": 0.38, "c": 0.1, "d": 0.05, "f": 0.04, "w": 0.01], avgGPA: 0.28, avgEasiness: 4, avgQuality: 3)
     ]
     
-    static var testSectionA = Section(letter: "A", days: "MWF", time: "10:30 - 11:20")
-    static var testSectionB = Section(letter: "B", days: "MWF", time: "1:30 - 2:20")
-    static var testSectionC = Section(letter: "C", days: "TR", time: "1:30 - 2:20")
-    static var testSectionD = Section(letter: "D", days: "TR", time: "2:00 - 2:50")
+    static var testSectionA = CourseSection(sID: "1", letter: "A", days: [.monday, .wednesday, .friday], startTime: "10:30:00", endTime: "11:20:00", professor: "Christopher Simpkins", course: Constants.sampleCourse)
+    static var testSectionB = CourseSection(sID: "2", letter: "B", days: [.monday, .wednesday, .friday], startTime: "01:30:00", endTime: "02:20:00", professor: "Christopher Simpkins", course: Constants.sampleCourse)
+    static var testSectionC = CourseSection(sID: "3", letter: "C", days: [.tuesday, .thursday], startTime: "01:30:00", endTime: "02:20:00", professor: "Christopher Simpkins", course: Constants.sampleCourse)
+    static var testSectionD = CourseSection(sID: "4", letter: "D", days: [.tuesday, .thursday], startTime: "02:00:00", endTime: "02:50:00", professor: "Christopher Simpkins", course: Constants.sampleCourse)
+    
+    static var testSections = [Constants.testSectionA, Constants.testSectionB, Constants.testSectionC, Constants.testSectionD]
     
     static var sampleUser = User(username: "sarah.t", uid: "\(UUID())", upvotedReviews: [], downvotedReviews: [], reviews: [], password: "password")
     
@@ -65,6 +67,11 @@ struct Constants {
         "CS 1331 John Stasko": []
     ]
     
+    static var calendarEvents = [
+        CalendarEvent(days: [.tuesday, .thursday], start: 11.5, duration: 1, text: "CS 1331", sectionID: "1"),
+        CalendarEvent(days: [.monday, .wednesday], start: 8.5, duration: 1.25, text: "CS 2050", sectionID: "2"),
+        CalendarEvent(days: [.tuesday, .thursday], start: 14, duration: 1.25, text: "CS 1332", sectionID: "3")
+    ]
 }
 
 struct ChartConstants {

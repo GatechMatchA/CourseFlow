@@ -28,6 +28,13 @@ class ProfessorRequest: CourseShopRequest {
             for (i, cp) in profs.enumerated() {
                 self.getProfessorDetails(for: cp.pID, onSuccess: { (fName, lName) in
                     profs[i].name = "\(fName) \(lName)"
+                }) { (error) in
+                    onFail(error)
+                }
+            }
+            for (i, _) in profs.enumerated() {
+                self.getProfessorSections(for: course, professor: profs[i], onSuccess: { (sections) in
+                    profs[i].sections = sections
                     onSuccess(profs)
                 }) { (error) in
                     onFail(error)
@@ -35,6 +42,48 @@ class ProfessorRequest: CourseShopRequest {
             }
         }) { (error) in
             onFail(error)
+        }
+    }
+    
+    func getProfessorSections(for course: Course, professor: Professor, onSuccess: @escaping ([CourseSection]) -> Void, onFail: @escaping (Error) -> Void) {
+        let path = "/sections?course=\(course.cID)&professor=\(professor.pID)"
+        HttpRequest.makeGetRequest(urlString: baseURL + path, success: { (data) in
+            guard let payload = data["payload"] as? [[String: Any]] else {
+                onFail(CustomError("ProfessorRequest.getProfessors): payload doesn't exist or payload is not [[String: Any]]. ->\n\(data)"))
+                return
+            }
+            var sections: [CourseSection] = []
+            for p in payload {
+                let mt = p["meetingTimes"] as! [[String: Any]]
+                let days = mt.map {self.getDayOfWeek(from: $0["dayOfWeek"] as! Int)}
+                print(p)
+                let section = CourseSection(sID: "\(p["id"] as! Int)", letter: p["sectionCode"] as! String, days: days, startTime: mt[0]["startTime"] as! String, endTime: mt[0]["endTime"] as! String, professor: professor.name, course: course)
+                sections.append(section)
+            }
+            onSuccess(sections)
+        }) { (error) in
+            onFail(error)
+        }
+    }
+    
+    func getDayOfWeek(from: Int) -> DaysOfWeek {
+        switch from {
+        case 0:
+            return .saturday
+        case 1:
+            return .sunday
+        case 2:
+            return .monday
+        case 3:
+            return .tuesday
+        case 4:
+            return .wednesday
+        case 5:
+            return .thursday
+        case 6:
+            return .friday
+        default:
+            return .sunday
         }
     }
     

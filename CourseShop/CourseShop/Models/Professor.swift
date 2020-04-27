@@ -11,7 +11,7 @@ import Foundation
 struct Professor: Hashable {
     var pID: String = "\(UUID())"
     var name: String
-    var sections: [Section]
+    var sections: [CourseSection]
     var gpas: [String:Double]
     var avgGPA: Double
     var avgEasiness: Double

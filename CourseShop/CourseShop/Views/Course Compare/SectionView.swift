@@ -34,7 +34,7 @@ struct SectionView: View {
                             }
                             ForEach(professor!.sections, id: \.self) { section in
                                 HStack {
-                                    Text("Section \(section.letter) | \(section.days) | \(section.time)").font(Font.system(size: 8))
+                                    Text("Section \(section.letter) | \(section.daysStr()) | \(section.startTime)-\(section.endTime)").font(Font.system(size: 8))
                                     Spacer()
                                 }
                             }

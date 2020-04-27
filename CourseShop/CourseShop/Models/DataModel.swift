@@ -9,7 +9,9 @@
 import Foundation
 
 class DataModel: ObservableObject {
+    // selected for comparison
     @Published var courses: [Course] = []
+    @Published var selectedSections: [CourseSection] = []
     @Published var user: User
     @Published var loggedIn = false
     init(user: User) {

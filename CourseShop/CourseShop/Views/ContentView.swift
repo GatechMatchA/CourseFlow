@@ -21,6 +21,7 @@ struct ContentView: View {
                     NavigationView {
                         CourseSelectView()
                         .environmentObject(viewModel)
+                        .environmentObject(dataModel)
                     }
                     .tabItem {
                         Image(systemName: "list.bullet")
@@ -29,6 +30,7 @@ struct ContentView: View {
                     NavigationView {
                         ScheduleView()
                         .environmentObject(dataModel)
+                            .environmentObject(ScheduleViewModel(sections: dataModel.selectedSections))
                         .navigationBarTitle("Schedule", displayMode: .inline)
                         .navigationBarHidden(true)
                     }.tabItem {

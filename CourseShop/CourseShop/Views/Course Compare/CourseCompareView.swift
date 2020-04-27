@@ -10,7 +10,8 @@ import SwiftUI
 
 struct CourseCompareView: View {
     @EnvironmentObject var viewModel: ViewModel
-    
+    @EnvironmentObject var dataModel: DataModel
+    @State var modalPresented = false
     var body: some View {
         VStack {
             SortBar(sort: self.viewModel.sort(by:)).foregroundColor(Color("primary_text_color"))
@@ -43,6 +44,21 @@ struct CourseCompareView: View {
                 }
                 .navigationBarTitle(Text("Compare"))
             }.padding(.top, -8)
+            Divider()
+            Button(action: {
+                self.modalPresented = true
+            }) {
+                Text("Add to Schedule (\(self.viewModel.selectedCourses.filter{ $0.selectedProfessor != nil }.count))")
+                .foregroundColor(Color("secondary_text_color"))
+            }.frame(width: 300, height: 50)
+            .background(self.viewModel.selectedCourses.filter{ $0.selectedProfessor != nil }.count > 0 ? Color("theme_color") : .gray)
+            .cornerRadius(25)
+            .padding(.bottom, 10)
+            .padding(.top, 2)
+        }.sheet(isPresented: $modalPresented) {
+            NavigationView {
+                AddToScheduleView(selectedCourses: self.viewModel.selectedCourses, selectedSections: self.dataModel.selectedSections).environmentObject(self.dataModel)
+            }
         }
     }
 }
