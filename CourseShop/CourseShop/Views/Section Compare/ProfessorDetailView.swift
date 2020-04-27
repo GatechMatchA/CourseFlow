@@ -21,7 +21,7 @@ struct ProfessorDetailView: View {
                     HStack {
                         Spacer()
                         Text("Section \(section.letter)").bold()
-                        Text("|| \(section.daysStr()) | \(section.startTime)-\(section.endTime)")
+                        Text("|| \(section.daysStr()) | \(section.timeStr())")
                         Spacer()
                     }
                 }

@@ -19,7 +19,7 @@ class ProfessorSelectViewModel: ObservableObject {
         profReq.getProfessors(for: course, onSuccess: { (profs) in
             print(profs)
             DispatchQueue.main.async {
-                self.professors = profs
+                self.professors = profs.sorted{$0.name < $1.name}
                 onComplete()
             }
         }) { (error) in

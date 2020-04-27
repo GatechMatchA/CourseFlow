@@ -32,4 +32,9 @@ class DataModel: ObservableObject {
             print(err)
         }
     }
+    func getTotalCredits() -> Int {
+        self.selectedSections.reduce(0, { a, b in
+            a + b.course.numCredits
+        })
+    }
 }

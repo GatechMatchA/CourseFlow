@@ -35,11 +35,11 @@ struct AddToScheduleView: View {
                                     Spacer()
                                 }
                                 HStack {
-                                    Text("\(section.daysStr()) | \(section.startTime)-\(section.endTime)")
+                                    Text("\(section.daysStr()) | \(section.timeStr())")
                                     Spacer()
                                 }
                             }.padding()
-                        }.background(self.selectedSections.contains {$0.sID == section.sID} ? Color("item_selected") : Color("item_unselected")).cornerRadius(5)
+                        }.cornerRadius(5).buttonStyle(CustomButtonStyle(baseColor: self.selectedSections.contains {$0.sID == section.sID} ? Color("item_selected") : Color("item_unselected")))
                     }
                 }
             }
@@ -62,5 +62,13 @@ struct AddToScheduleView: View {
 struct AddToScheduleView_Previews: PreviewProvider {
     static var previews: some View {
         AddToScheduleView(selectedCourses: [], selectedSections: [])
+    }
+}
+
+struct CustomButtonStyle: ButtonStyle {
+    var baseColor: Color
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(configuration.isPressed ? Color("item_selected") : self.baseColor)
     }
 }

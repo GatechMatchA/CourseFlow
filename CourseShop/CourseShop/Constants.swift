@@ -24,10 +24,10 @@ struct Constants {
         Professor(name: "John Stasko", sections: [Constants.testSectionD], gpas: ["a": 0.32, "b": 0.38, "c": 0.1, "d": 0.05, "f": 0.04, "w": 0.01], avgGPA: 0.28, avgEasiness: 4, avgQuality: 3)
     ]
     
-    static var testSectionA = CourseSection(sID: "1", letter: "A", days: [.monday, .wednesday, .friday], startTime: "10:30:00", endTime: "11:20:00", professor: "Christopher Simpkins", course: Constants.sampleCourse)
-    static var testSectionB = CourseSection(sID: "2", letter: "B", days: [.monday, .wednesday, .friday], startTime: "01:30:00", endTime: "02:20:00", professor: "Christopher Simpkins", course: Constants.sampleCourse)
-    static var testSectionC = CourseSection(sID: "3", letter: "C", days: [.tuesday, .thursday], startTime: "01:30:00", endTime: "02:20:00", professor: "Christopher Simpkins", course: Constants.sampleCourse)
-    static var testSectionD = CourseSection(sID: "4", letter: "D", days: [.tuesday, .thursday], startTime: "02:00:00", endTime: "02:50:00", professor: "Christopher Simpkins", course: Constants.sampleCourse)
+    static var testSectionA = CourseSection(sID: "1", letter: "A", days: [.monday, .wednesday, .friday], startTime: "10:30:00", endTime: "11:20:00", professor: "Christopher Simpkins", course: Constants.sampleCourse, crn: "12345")
+    static var testSectionB = CourseSection(sID: "2", letter: "B", days: [.monday, .wednesday, .friday], startTime: "01:30:00", endTime: "02:20:00", professor: "Christopher Simpkins", course: Constants.sampleCourse, crn: "12345")
+    static var testSectionC = CourseSection(sID: "3", letter: "C", days: [.tuesday, .thursday], startTime: "01:30:00", endTime: "02:20:00", professor: "Christopher Simpkins", course: Constants.sampleCourse, crn: "12345")
+    static var testSectionD = CourseSection(sID: "4", letter: "D", days: [.tuesday, .thursday], startTime: "02:00:00", endTime: "02:50:00", professor: "Christopher Simpkins", course: Constants.sampleCourse, crn: "12345")
     
     static var testSections = [Constants.testSectionA, Constants.testSectionB, Constants.testSectionC, Constants.testSectionD]
     

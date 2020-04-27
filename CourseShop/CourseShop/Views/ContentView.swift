@@ -47,7 +47,8 @@ struct ContentView: View {
                         Image(systemName: "plus.circle")
                         Text("Review")
                     }.tag(2)
-                    ProfileView(user: Constants.sampleUser)
+                    ProfileView()
+                    .environmentObject(dataModel)
                     .tabItem {
                         Image(systemName: "person.fill")
                         Text("Profile")

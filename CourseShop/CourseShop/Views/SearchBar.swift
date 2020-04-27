@@ -23,7 +23,9 @@ struct SearchBar: View {
                 }).foregroundColor(.primary)
 
                 Button(action: {
-                    self.searchText = ""
+                    withAnimation {
+                        self.searchText = ""
+                    }
                 }) {
                     Image(systemName: "xmark.circle.fill").opacity(searchText == "" ? 0 : 1)
                 }
@@ -35,9 +37,11 @@ struct SearchBar: View {
 
             if showCancelButton  {
                 Button("Cancel") {
+                    withAnimation {
                         UIApplication.shared.endEditing(true) // this must be placed before the other commands here
                         self.searchText = ""
                         self.showCancelButton = false
+                    }
                 }
                 .foregroundColor(Color(.systemBlue))
             }

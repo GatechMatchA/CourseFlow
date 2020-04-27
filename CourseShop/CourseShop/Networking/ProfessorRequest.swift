@@ -57,7 +57,7 @@ class ProfessorRequest: CourseShopRequest {
                 let mt = p["meetingTimes"] as! [[String: Any]]
                 let days = mt.map {self.getDayOfWeek(from: $0["dayOfWeek"] as! Int)}
                 print(p)
-                let section = CourseSection(sID: "\(p["id"] as! Int)", letter: p["sectionCode"] as! String, days: days, startTime: mt[0]["startTime"] as! String, endTime: mt[0]["endTime"] as! String, professor: professor.name, course: course)
+                let section = CourseSection(sID: "\(p["id"] as! Int)", letter: p["sectionCode"] as! String, days: days, startTime: mt[0]["startTime"] as! String, endTime: mt[0]["endTime"] as! String, professor: professor.name, course: course, crn: p["crn"] as! String)
                 sections.append(section)
             }
             onSuccess(sections)
