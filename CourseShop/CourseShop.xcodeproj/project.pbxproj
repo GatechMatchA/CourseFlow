@@ -157,6 +157,15 @@
 			path = ReusableViews;
 			sourceTree = "<group>";
 		};
+		5A7180E62457701500E0D643 /* Scheduling */ = {
+			isa = PBXGroup;
+			children = (
+				5A2F832024568CA10061C56E /* ScheduleView.swift */,
+				5A2611E52456AA9800098A2C /* CalendarView.swift */,
+			);
+			path = Scheduling;
+			sourceTree = "<group>";
+		};
 		5A869A3D23F2573A0026B555 = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +190,6 @@
 				5A869A4923F2573A0026B555 /* AppDelegate.swift */,
 				5A869A4B23F2573A0026B555 /* SceneDelegate.swift */,
 				5A869A6F23F276B00026B555 /* Constants.swift */,
-				5A9A976523F776120083434F /* LoadingView.swift */,
 				5AFF63A92406A6F80020832C /* Networking */,
 				5A9A976423F775F80083434F /* Models */,
 				5A9A976323F775EA0083434F /* ViewModels */,
@@ -209,8 +217,7 @@
 				5A869A5D23F25EE30026B555 /* SearchBar.swift */,
 				5A869A4D23F2573A0026B555 /* ContentView.swift */,
 				5ADFBDBC24563D9C00C31BF7 /* LoginView.swift */,
-				5A2F832024568CA10061C56E /* ScheduleView.swift */,
-				5A2611E52456AA9800098A2C /* CalendarView.swift */,
+				5A7180E62457701500E0D643 /* Scheduling */,
 				5AF2427E243AB6F80023A7CD /* Review Create */,
 				5AA51EE9243AB168007B5CB0 /* Profile */,
 				5A01044723F7A701002BA509 /* ReusableViews */,
@@ -224,6 +231,7 @@
 		5A869A6423F25FAE0026B555 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				5A9A976523F776120083434F /* LoadingView.swift */,
 				5A869A6123F25F7B0026B555 /* ViewModifiers.swift */,
 				5A869A5F23F25F410026B555 /* Extensions.swift */,
 			);
